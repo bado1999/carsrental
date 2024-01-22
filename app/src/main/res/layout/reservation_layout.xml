@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_reservation"
+    android:paddingBottom="8dp"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginTop="8dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/car_photo"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:adjustViewBounds="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/car_2"
+        app:shapeAppearanceOverlay="@style/car_shape"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.3" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Telsa Model S3"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/gray"
+        app:layout_constraintStart_toEndOf="@+id/car_photo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/seats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="3 Seats"
+        android:textColor="@color/dark_blue"
+        app:layout_constraintBaseline_toBaselineOf="@id/reservation_price"
+        app:layout_constraintStart_toEndOf="@+id/car_photo"
+        app:layout_constraintTop_toBottomOf="@id/reservation_date"
+        tools:layout_constraintTop_toBottomOf="@id/reservation_date" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="3dp"
+        android:layout_height="3dp"
+        android:layout_marginStart="4dp"
+        android:background="@drawable/shape_circle"
+        app:layout_constraintBottom_toBottomOf="@+id/reservation_price"
+        app:layout_constraintStart_toEndOf="@+id/seats"
+        app:layout_constraintTop_toBottomOf="@+id/reservation_date" />
+
+    <TextView
+        android:id="@+id/reservation_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Jan 24 at 15 PM - Mar 4 at 3 PM "
+        android:textSize="12sp"
+        android:textColor="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/car_photo"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintWidth_percent="0.6" />
+
+    <TextView
+        android:id="@+id/reservation_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        android:layout_marginStart="4dp"
+        app:layout_constraintStart_toEndOf="@id/view"
+        app:layout_constraintTop_toBottomOf="@id/reservation_date"
+        android:text="300dh/Day"
+        android:textColor="@color/dark_blue"
+        />
+
+    <TextView
+        android:id="@+id/cancel"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/shape_rounded"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:fontFamily="@font/poppins_medium"
+        android:layout_marginTop="8dp"
+        android:text="Cancel Reservation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/car_photo"
+        app:layout_constraintTop_toBottomOf="@+id/reservation_price"
+        app:layout_constraintWidth_percent="0.6" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
